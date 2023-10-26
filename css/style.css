@@ -1,0 +1,367 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root {
+    --first-color: rgb(12, 12, 56);
+    --second-color: rgb(251, 196, 171);
+    --third-color: rgb(248, 224, 202);
+    
+    --font-color: #444444;
+  
+    --first-font-family: 'Montserrat', sans-serif;
+    --second-font-family: 'Urbanist', sans-serif;
+  }
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+
+body {
+  color: var(--font-color);
+}
+
+/* --------- HEADER --------- */
+  header { /*Barra de navegación*/
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 90px;
+    transition: 0.6s;
+    padding: 20px 120px;
+    z-index: 10000;
+  }
+
+  .burger-button,
+  .close-button {
+    display: none;
+  }
+  
+  header.sticky { /*Barra de navegación al hacer scroll*/
+    padding: 20px 120px;
+    background: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  header.sticky ul li a { /*Color items barra de navegación al hacer scroll*/
+    color: var(--first-color);
+  }
+
+  .line {
+    display: none;
+  }
+
+  .header-list { /*Items de navegación*/
+    display: flex;
+    justify-content: end;
+    align-items: center; 
+    list-style: none;
+    padding-top: 0.8rem;
+  }
+  
+
+  .header-list li a { /*Color de los items de navegación*/
+    color: #fff;
+    font-family: var(--first-font-family);
+    display: flex;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+
+  .header-list li a:hover { /*Color de los items hover de navegación*/
+    font-weight: bold;
+  }
+  
+
+  .header-list a.active { /*Color del item activo de navegación*/
+    font-weight: bold;
+  }
+  
+  
+  .items { /*Distancia entre items e iconos*/
+    display: flex;
+    gap: 2rem;
+  }
+
+
+
+
+  /* --------- CAROUSEL --------- */
+ .carousel-item.img-1 {
+  background: linear-gradient(to bottom, rgba(0, 0, 50, 0.7) 0%, rgba(0, 0, 50, 0.7) 100%), url("../assets/imagen1.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+ }
+
+ .carousel-item.img-2 {
+  background: linear-gradient(to bottom, rgba(0, 0, 50, 0.7) 0%, rgba(0, 0, 50, 0.7) 100%), url("../assets/imagen2.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+ }
+
+ .carousel-item.img-3 {
+  background: linear-gradient(to bottom, rgba(0, 0, 50, 0.7) 0%, rgba(0, 0, 50, 0.7) 100%), url("../assets/imagen3.jpg");
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+ }
+
+ .description {
+  position: absolute;
+  z-index: 1000;
+  top: 250px;
+  left: 30%;
+  transform: translateX(-50%); /* Centra horizontalmente utilizando transform */
+  color: #fff;
+  font-family: var(--first-font-family);
+
+ }
+
+ .description p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+ }
+
+ .carousel-inner {
+  position: relative;
+ }
+
+ h1 {
+  margin-top: 0;
+  margin-bottom: 2rem;
+ }
+
+ 
+
+  /* --------- CONTACT --------- */
+ .container {
+  margin: 8rem auto;
+ }
+
+  #contact { /*Color de fondo sección contacto*/
+    background: var(--second-color);
+  }
+  
+  
+  .contact-item {
+    display: flex;
+    margin-top: 4rem;
+  }
+  
+  
+  .location,
+  .email {
+    display: block;
+    margin-bottom: 2rem;
+  }
+  
+  
+  #contact a:hover {
+    color: #fff;
+  }
+  
+       
+  .contact-form {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  
+  
+  .input-form, textarea {
+    display: block;
+    width: 100%;
+    padding: 0.2rem;
+    border-radius: 3px;
+  }
+  
+  
+  .input-form {
+    height: 2.2rem;
+  }
+  
+  
+  label {
+    margin-bottom: 0.5rem;
+  }
+  
+  
+  .contact-form-response {
+    font-weight: bold;
+  }
+  
+    
+  .contact-form [required]:valid {
+    border: 2px solid var(--first-color);
+  }
+  
+   
+  .contact-form [required]:invalid {
+    border: 1px solid gray;
+  }
+  
+  
+  .contact-form-error {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    transition: all 800ms ease;
+  }
+  
+       
+  .contact-form-error.is-active {
+    display: block;
+    animation: show-message 1s 1 normal 0s ease-out both;
+  }
+   
+  
+  .none {
+    display: none;
+  }
+  
+  
+  .btn-contact {
+    margin-top: 1rem;
+  }
+  
+  
+  @keyframes show-message {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+  
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+  
+  
+  .email-bold {
+    font-weight: bold;
+  }
+  
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+    /* HEADER */
+    /* BOTON HAMBURGUESA */
+    .menu-toggle .burger-button {
+      font-size: 2rem;
+    }
+
+    .burger-button {
+      display: block;
+    }
+
+    .close-button {
+      display: none;
+  }
+
+  .close-button.active {
+    color: var(--first-color);
+    display: block;
+    font-size: 1.8rem;
+    position: absolute;
+    top: 0;
+  }
+
+  
+  
+    
+
+    /* Muestra el botón hamburguesa */
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 20px;
+        left: 30px;
+        z-index: 1000;
+        cursor: pointer;
+        color: #fff;
+    }
+  
+    #menu .items {
+      display: flex;
+      position: absolute;
+      flex-direction: column;
+      list-style: none;
+      padding: 0; 
+      top: 0;
+      left: 0;
+      display: none;
+      background-color: #fff;
+      width: 100%;
+      height: 330px;
+      padding-top: 70px;
+      padding-left: 30px;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .header-list .items li a {
+    color: var(--font-first-color);
+    padding-top: 20px;
+  }
+  
+  .header-list .items li a:hover {
+    color: var(--first-color);
+  }
+  
+  .header-list .items li a.active {
+    color: var(--first-color);
+  }
+  
+  .menu-open .header-list {
+    display: block;
+  }
+  
+  .header-list .icons {
+    display: none;
+  }
+
+  .line {
+    display: flex;
+    width: 90%;
+    height: 1px;
+    background-color:lightblue;
+    margin-top: 1rem;
+  }
+
+
+
+  /* HERO */
+  .description {
+    position: absolute;
+    z-index: 1000;
+    top: 250px;
+    left: 40%;
+    transform: translateX(-50%); /* Centra horizontalmente utilizando transform */
+    color: #fff;
+    font-family: var(--first-font-family);
+   }
+
+   .description p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+   }
+  
+}  
