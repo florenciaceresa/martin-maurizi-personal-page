@@ -56,6 +56,32 @@ menuToggle.addEventListener('click', function() {
 });
 
 
+//Link activo
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll(".link-active"); // Cambia a tu selector adecuado
+
+    window.addEventListener("scroll", function() {
+        let current = "";
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (window.pageYOffset >= sectionTop - sectionHeight / 2) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        // Agrega la clase "active" al enlace correspondiente y retírala de los demás
+        document.querySelectorAll(".header-list a, .header-list .items li a").forEach(link => {
+            link.classList.remove("active");
+            if (link.getAttribute("href") === "#" + current) {
+                link.classList.add("active");
+            }
+        });
+    });
+});
+
+
+
 
 
 
