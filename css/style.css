@@ -26,6 +26,11 @@ h2 {
   font-family: var(--first-font-family);
   color: var(--first-color);
 }
+
+
+
+
+
 /* --------- HEADER --------- */
   header { /*Barra de navegación*/
     position: fixed;
@@ -141,16 +146,36 @@ h2 {
 
 
    /* --------- SERVICES --------- */
-  #services {
-    background-color: lightblue;
-  }
-
-  
-
-   .card {
+     .card {
     width: 18rem;
     margin: 0 1rem;
-   }
+  }
+
+  .btn-service {
+    border: 1px solid var(--first-color);
+    color: var(--first-color);
+  }
+
+  .btn-service:hover {
+    background-color: var(--first-color);
+    border: 1px solid var(--first-color);
+
+  }
+
+
+
+  /* --------- ASK FOR TURN --------- */
+  .container-fluid.ask-for-turn {
+    background-color: var(--first-color);
+  }
+
+
+  .ask-for-turn a {
+    width: 8rem;
+    margin-left: 12px;
+    margin-top: 2rem;
+
+  }
 
  
 
@@ -490,6 +515,8 @@ h2 {
      .cards {
       gap: 3rem;
     }
+
+    
   
 
 
