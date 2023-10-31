@@ -27,6 +27,12 @@ h2 {
   color: var(--first-color);
 }
 
+h5 {
+  font-family: var(--first-font-family);
+  font-size: 1rem;
+  color: var(--font-color);
+}
+
 
 
 
@@ -49,12 +55,12 @@ h2 {
   
   header.sticky { /*Barra de navegación al hacer scroll*/
     padding: 20px 120px;
-    background: #fff;
+    background: var(--first-color);
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   }
   
   header.sticky ul li a { /*Color items barra de navegación al hacer scroll*/
-    color: var(--first-color);
+    color: #fff;
   }
 
   .line {
@@ -145,22 +151,35 @@ h2 {
  }
 
 
+
+
+    /* --------- ABOUT --------- */
+    
+
+
+
    /* --------- SERVICES --------- */
+
      .card {
-    width: 18rem;
+    width: 15rem;
     margin: 0 1rem;
   }
 
   .btn-service {
-    border: 1px solid var(--first-color);
     color: var(--first-color);
+    text-decoration: none;
   }
 
-  .btn-service:hover {
-    background-color: var(--first-color);
-    border: 1px solid var(--first-color);
-
+  .card-title {
+    font-weight: bold;
   }
+
+  .card p.card-text {
+    color: var(--font-color);
+    font-size: 0.9rem;
+  }
+
+  
 
 
 
@@ -176,6 +195,23 @@ h2 {
     margin-top: 2rem;
 
   }
+
+
+
+
+  /* --------- FACILITIES --------- */
+  .img-facility-1 {
+    background-image: url(../assets/instalaciones1.jpg);
+    background-size: cover;
+    height: 15rem;
+  }
+
+  .img-facility-2 {
+    background-image: url(../assets/instalaciones2.jpg);
+  }
+
+  
+
 
  
 
@@ -365,23 +401,14 @@ h2 {
   position: relative;
 }
 
-
-.modal-img { 
-  width: 40%;
-  border-radius: 6px;
-}
-
-
 .modal-title {
-  font-size: 1.2rem;
-  margin-top: 1.5rem;
+  font-size: 1.5rem;
 }
-
 
 .modal-paragraph {
-  text-align: center;
   margin: 0;
   padding: 0;
+  font-size: 0.9rem;
 }
 
 
@@ -391,6 +418,7 @@ h2 {
   right: 15px;
   cursor: pointer;
   font-size: 1.5rem;
+  color: var(--first-color);
 }
  
 
