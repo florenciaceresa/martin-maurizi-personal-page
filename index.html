@@ -26,9 +26,11 @@
             <div class="items">
                 <li><a href="#home" class="active">Inicio</a></li>
                 <div class="line"></div>
-                <li><a href="#about">Nosotros</a></li>
-                <div class="line"></div>
                 <li><a href="#services">Servicios</a></li>
+                <div class="line"></div>
+                <li><a href="#turno">Turnos</a></li>
+                <div class="line"></div>
+                <li><a href="#about">Nosotros</a></li>
                 <div class="line"></div>
                 <li><a href="#contact">Contacto</a></li>
             </div>
@@ -37,37 +39,45 @@
 
 
     <!--HERO-->
-    <div class="container-carousel link-active" id="home">
-        <!-- El carrusel -->
-        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
-            <!-- Indicadores de las imágenes -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-            </ol>
-            <!-- Imágenes del carrusel -->
-            <div class="carousel-inner">
-                <div class="carousel-item img-1 active"></div>
-                <div class="carousel-item img-2"></div>
-                <div class="carousel-item img-3"></div>
-                <div class="description">
-                    <p>CENTRO DE KINESIOLOGÍA Y FISIATRÍA</p>
-                    <h1>Lic. Martín Nicolás Maurizi</h1>
-                    <a href="https://wa.me/5493467414717/?text=Hola Martín, quiero hacerte una consulta sobre .." class="btn btn-outline-light" target="_blank">CONTACTAR</a>
-                </div>
-            </div>        
+    <div class="container-hero" id="home">
+        <div class="container-white">
+            <div class="description">
+                <p>CENTRO DE KINESIOLOGÍA Y FISIATRÍA</p>
+                <h1>Lic. Martín Nicolás Maurizi</h1>
+                <a href="https://wa.me/5493467414717/?text=Hola Martín, quiero hacerte una consulta sobre .." class="btn btn-hero" target="_blank">CONTACTAR</a>
+            </div>
         </div>
+        <div class="container-img">
+
+        </div>
+
+        <!--
+            <div class="container-carousel link-active" id="home">
+            <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+                < Indicadores de las imágenes 
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+                 Imágenes del carrusel 
+                <div class="carousel-inner">
+                    <div class="carousel-item img-1 active"></div>
+                    <div class="carousel-item img-2"></div>
+                    <div class="carousel-item img-3"></div>
+                    
+                </div>        
+            </div>
+        </div>
+
+
+        -->
+        
     </div>
+    
 
 
     <main>
-        <!--ABOUT-->
-        <div class="container container-about mb-0 text-center link-active" id="about">
-            <p class="fs-5">Nuestra misión es empoderar a nuestros pacientes a vivir vidas más saludables y activas. A través de terapias y técnicas avanzadas, trabajamos junto a usted para restaurar su vitalidad y mejorar su calidad de vida.</p>
-        </div>
-
-
 
         <!--SERVICES-->
         <div class="container-fluid link-active h-auto bg-light" id="services">
@@ -118,7 +128,7 @@
 
 
         <!--ASK FOR TURN-->
-        <div class="container-fluid h-auto ask-for-turn">
+        <div class="container-fluid h-auto ask-for-turn" id="turno">
             <div class="container">
                 <div class="row">
                     <h2 class="text-light">Solicitá tu turno</h2>
@@ -131,39 +141,15 @@
 
 
         <!--CONTACT-->
-        <div class="container link-active" id="contact">
-            <div class="row">
-                <div>
-                    <h2>Contacto</h2>
-                </div>
-                <div class="contact-item col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center mb-5">
+        <div class="container-contact link-active" id="contact">
+                <div class="info-contact">
+                    <h2 class="mb-4">Contacto</h2>
                     <i class="bi bi-geo-alt-fill location mb-4"><a href="https://goo.gl/maps/CQzhxm2fiYZLmGFCA" target="_blank">&nbsp; Inriville, Córdoba, Argentina</a></i>
                     <i class="bi bi-envelope-fill email mb-4"><a href="mailto:martinmaurizi@gmail.com" target="_blank">&nbsp; martinmaurizi@gmail.com</a></i> 
                     <i class="bi bi-telephone-fill mb-4"><a href="tel:+5493467414717" class="phone-number">&nbsp; +5493467414717</a></i>
-                    <iframe class="mt-4 col-lg-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.0573372082063!2d-62.23391552444119!3d-32.949495572032305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c973050baf6c59%3A0x5d8dbef32204b063!2sKinesiolog%C3%ADa%20y%20fisiatr%C3%ADa.%20MARTIN%20N.MAURIZI!5e0!3m2!1ses!2sar!4v1698349137343!5m2!1ses!2sar" width="auto" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
-                <!--FORM-->
-                <div class="col-12 col-md-6 col-lg-6 d-flex flex-column justify-content-center mt-4">
-                    <form class="contact-form"> 
-                        <div class="mb-4">
-                            <label for="name">Nombre y apellido</label>
-                            <input type="text" name="name" class="input-form" title="Nombre solo acepta letras y espacios en blanco" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="email">Correo electrónico</label>
-                            <input type="email" name="email" class="input-form" title="Email incorrecto" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-                        </div>
-                        <div class="mb-4">
-                            <label for="comments">Consulta</label>
-                            <textarea rows="3" name="comments" title="Tu comentario no debe exceder los 300 caracteres" data-pattern="^.{1,255}$" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <input class="btn btn-secondary" type="submit" value="Enviar"/>
-                        </div>
-                        <div>
-                            <p class="contact-form-response none">Los datos fueron enviados</p>
-                        </div>
-                    </form>
+                <div class="map">
+                    <iframe class="mt-4 col-lg-10" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3348.0573372082063!2d-62.23391552444119!3d-32.949495572032305!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95c973050baf6c59%3A0x5d8dbef32204b063!2sKinesiolog%C3%ADa%20y%20fisiatr%C3%ADa.%20MARTIN%20N.MAURIZI!5e0!3m2!1ses!2sar!4v1698349137343!5m2!1ses!2sar" width="auto" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
         </div>
@@ -178,12 +164,13 @@
                         <h2 class="text-light fs-4">Lic. Martín Nicolás Maurizi</h2>
                         <p class="fs-6 text-light mt-3">© 2023 | Diseño y desarrollo hecho por Florencia Ceresa</p>
                     </div>
-                    <div class="col-12 col-md-3 col-lg-2">
+                    <div class="col-12 col-md-3 col-lg-2 d-flex flex-column">
                         <h4 class="text-light fs-6 mb-3">Links</h4>
-                        <p class="text-light">Inicio</p>
-                        <p class="text-light">Nosotros</p>
-                        <p class="text-light">Servicio</p>
-                        <p class="text-light">Contacto</p>
+                        <a href="#home" class="text-light mb-2">Inicio</a>
+                        <a href="#services" class="text-light mb-2">Servicios</a>
+                        <a href="#turno" class="text-light mb-2">Turnos</a>
+                        <a href="#about" class="text-light mb-2">Nosotros</a>
+                        <a href="#contact" class="text-light">Contacto</a>
                     </div>
                     <div class="col-12 col-md-3 col-lg-3">
                         <h4 class="text-light fs-6 mb-3">Contacto</h4>
