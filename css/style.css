@@ -157,6 +157,9 @@ h5 {
   font-family: var(--first-font-family);
  }
  
+ .description-mobile {
+  display: none;
+ }
 
  .description p {
   font-size: 1.1rem;
@@ -264,21 +267,41 @@ h5 {
     width: 8rem;
     margin-left: 12px;
     margin-top: 2rem;
+    color: #6CA6C1;
 
   }
 
 
 
 
-  /* --------- FACILITIES --------- */
-  .img-facility-1 {
-    background-image: url(../assets/instalaciones1.jpg);
+
+
+
+  /* --------- ABOUT --------- */
+  .container-about {
+    display: flex;
+    height: auto;
+  }
+
+  .about-img {
+    width: 50%;
+    height: 500px;
+    background-image: url(../assets/imagen1.jpg);
     background-size: cover;
-    height: 15rem;
   }
 
-  .img-facility-2 {
-    background-image: url(../assets/instalaciones2.jpg);
+  .about-info {
+    width: 50%;
+    height: 500px;
+    display: flex;
+    align-items: center;
+  }
+
+  .container-info {
+    width: 75%;
+    display: flex;
+    margin: 0 auto;
+    flex-direction: column;
   }
 
   
@@ -511,6 +534,11 @@ h5 {
 @media (max-width: 768px) {
     /* HEADER */
     /* BOTON HAMBURGUESA */
+  header {
+    background-color: transparent;
+    width: 100%;
+  }
+
     .menu-toggle .burger-button {
       font-size: 2rem;
     }
@@ -557,7 +585,7 @@ h5 {
       display: none;
       background-color: #fff;
       width: 100%;
-      height: 330px;
+      height: 380px;
       padding-top: 70px;
       padding-left: 30px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -588,14 +616,23 @@ h5 {
     display: flex;
     width: 90%;
     height: 1px;
-    background-color:lightblue;
+    background-color: var(--second-color);
     margin-top: 1rem;
   }
 
 
 
   /* HERO */
-  .description {
+  .container-white {
+    display: none;
+  }
+
+  .container-img {
+    width: 100%;
+  }
+
+  .description-mobile {
+    display: block;
     position: absolute;
     z-index: 1000;
     top: 250px;
@@ -605,9 +642,23 @@ h5 {
     font-family: var(--first-font-family);
    }
 
-   .description p {
-    font-size: 1rem;
+   .description-mobile p {
+    font-size: 0.8rem;
     margin-bottom: 1rem;
+   }
+
+   .description-mobile h1 {
+    font-size: 1.3rem;
+   }
+
+   .btn-hero {
+    background-color: #fff;
+    color: var(--first-color);
+   }
+
+   .btn-hero:hover {
+    background-color: var(--first-color);
+    color: #fff;
    }
 
 
@@ -619,11 +670,54 @@ h5 {
     }
 
     
-  
+  /* --------- ABOUT --------- */
+.container-about {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-img {
+  width: 100%;
+  margin-bottom: 5rem;
+}
+
+.about-info {
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.container-info {
+  padding-top: 8rem;
+}
+
+
+  /* --------- CONTACT --------- */
+  .container-contact {
+    flex-direction: column;
+    margin: 8rem auto;
+    width: 100%;
+  }
+
+  .info-contact {
+    width: 80%;
+  }
+
+  .map {
+    width: 100%;
+  }
+
+  iframe {
+    height: 10rem;
+  }
 
 
 
      /* MODAL */
+
+     .modal-container {
+      overflow: auto;
+     }
+
 .modal-img {
   width: 80%;
 }
@@ -640,5 +734,35 @@ h5 {
 .see-project {
   font-size: 0.7rem;
 }
+
+
+  /* --------- FOOTER --------- */
+  .copy {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .footer-mm p {
+    font-size: 0.8rem;
+  }
+
+  .footer-mm h2 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .links h4,
+  .links a,
+  .services h4,
+  .services p,
+  .contacts h4,
+  .contacts p {
+    display: none;
+  }
+
+  .services {
+    display: none;
+  }
+
 
 }  
