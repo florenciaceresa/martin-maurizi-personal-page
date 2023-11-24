@@ -25,6 +25,7 @@ body {
 h2 {
   font-family: var(--first-font-family);
   color: var(--first-color);
+  margin-bottom: 2rem;
 }
 
 h5 {
@@ -34,7 +35,7 @@ h5 {
 }
 
 .container {
-  margin: 6rem auto;
+  margin: 8rem auto;
 }
 
 
@@ -183,25 +184,71 @@ h5 {
 
 
    /* --------- SERVICES --------- */
+   .description-services {
+   }
 
-     .card {
+     .service-card {
     width: 15rem;
     margin: 0 1rem;
+    border: 1px solid #fff;
+    text-align: start;
+  }
+
+  .img-service-1 {
+    background-image: url(../assets/terapia-manual.jpg);
+    width: 240px;
+    height: 150px;
+    background-size: cover;
+  }
+
+  .img-service-2 {
+    background-image: url(../assets/magnetoterapia.jpg);
+    width: 240px;
+    height: 150px;
+    background-size: cover;
+  }
+
+  .img-service-3 {
+    background-image: url(../assets/puncion-seca.jpg);
+    width: 240px;
+    height: 150px;
+    background-size: cover;
+  }
+
+  .img-service-4 {
+    background-image: url(../assets/kinesio-deportiva.jpg);
+    width: 240px;
+    height: 150px;
+    background-size: cover;
+  }
+
+  .service-card h5 {
+    margin-top: 1.5rem;
+  }
+
+  .card-text {
+    color: var(--font-color);
+    margin-bottom: 1.5rem;
   }
 
   .btn-service {
-    color: var(--first-color);
+    color: #fff;
     text-decoration: none;
+    background-color: var(--second-color);
+    padding: 0.4rem 1rem;
+    border-radius: 4px;
+  }
+
+  .btn-service:hover {
+    background-color: var(--first-color);
+    color: #fff;
   }
 
   .card-title {
     font-weight: bold;
   }
 
-  .card p.card-text {
-    color: var(--font-color);
-    font-size: 0.9rem;
-  }
+  
 
   
 
@@ -374,6 +421,20 @@ h5 {
 }
 
 
+/* --------- FOOTER --------- */
+.icons {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.icons a i {
+  color: #fff;
+}
+
+.links a {
+  text-decoration: none;
+}
 
 
 /* --------- MODAL --------- */
